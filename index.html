@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <style>
+      /*https://preview.colorlib.com/#reshape*/
+      @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+      body {
+         background-color: #ececec;
+      }
+
+      :root {
+         --mycolor1: #222;
+         --mycolor2: #0779e4;
+         --mycolor3: #000000;
+         --mycolor4: #0883f7;
+         --myfont1: "Mulish", sans-serif;
+
+      }
+
+      .main {
+         box-sizing: border-box;
+         max-width: 1000px;
+         margin: 0 auto;
+         background-color: #fff;
+         font-family: var(--myfont1);
+         font-size: 14px;
+         line-height: 20px;
+      }
+
+      .main a {
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      .main h3,
+      .main h4 {}
+
+      .main h2 {}
+
+      .main p {}
+
+      .main ul {
+         padding: 0 !important;
+         margin: 0 !important;
+      }
+
+      .main ul li {
+         list-style-type: none !important;
+         padding-left: 20px !important;
+         font-size: 14px !important;
+         line-height: 22px !important;
+         padding: 0 !important;
+         margin: 7px 0 !important;
+      }
+
+      ._container {
+         max-width: 1000px;
+         margin: 0 auto;
+      }
+
+      ._container-2 {
+         max-width: 910px;
+         margin: 0 auto;
+      }
+
+      ._container-3 {
+         max-width: 750px;
+         margin: 0 auto;
+      }
+
+      /*introduction*/
+      .introduction {}
+
+      .introduction__container {}
+
+      ._container {}
+
+      .introduction__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .introduction__content {
+         flex: 1 1 30%;
+         background: #fff;
+         padding: 10px 30px 50px;
+      }
+
+      .introduction__image {
+         flex: 1 1 55%;
+         margin: 0 0 -30px 0;
+      }
+
+      .introduction__image img {
+         width: 100%;
+         height: 500px;
+         object-fit: cover;
+         display: flex;
+      }
+
+      .introduction__sub-title {
+         margin: 0;
+         line-height: 20px;
+      }
+
+      .introduction__title {
+         color: var(--mycolor3);
+         font-size: 55px;
+         line-height: 55px;
+         display: inline-block;
+         margin: 40px 0px 30px 0;
+         position: relative;
+         width: 150%;
+         font-weight: 500;
+      }
+
+      .introduction__title span {
+         font-weight: 800;
+      }
+
+      .introduction__buttons {
+         display: flex;
+         flex-wrap: wrap;
+
+      }
+
+      .re-button {
+         display: inline-block;
+         background: var(--mycolor2);
+         color: #fff !important;
+         text-decoration: none !important;
+         padding: 10px 30px;
+         border-radius: 30px;
+         transition: .3s;
+      }
+
+      .re-button:active {
+         box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5);
+      }
+
+      .re-button:hover {
+         background: var(--mycolor4);
+         transition: .3s;
+      }
+
+      .re-button-black {
+         display: inline-block;
+         margin-left: 10px;
+         background: var(--mycolor3);
+      }
+
+      .re-button-black:active {
+         box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.5);
+      }
+
+      .re-button-black:hover {
+         background: var(--mycolor3);
+      }
+
+      @media screen and (max-width: 730px) {
+         .introduction__image {
+            display: none;
+         }
+
+         .introduction__content {
+            flex: 1 1 100%;
+            background: #fff url(img/introduction.jpg);
+            background-size: cover;
+            padding: 30px;
+         }
+
+         .introduction__title {
+            width: 100%;
+            font-size: 40px;
+            line-height: 45px;
+            margin: 20px 0;
+         }
+
+      }
+
+      /*--------numbers------*/
+
+      .numbers {
+         background-color: var(--mycolor1);
+         padding: 60px 30px 30px;
+         color: #fff;
+      }
+
+      .numbers__contanier {}
+
+      ._container-2 {}
+
+      .numbers__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .numbers__item {
+         margin: 10px;
+         flex: 1 1 20%;
+      }
+
+      .numbers__numeric {
+         font-size: 45px;
+         font-weight: 600;
+         margin: 10px 0;
+      }
+
+      .numbers__text {
+         margin: 0 0 10px;
+         color: #aaa;
+         font-size: 13px;
+      }
+
+      @media screen and (max-width: 500px) {
+         .numbers__item {
+            flex: 1 1 40%;
+         }
+
+         .numbers {
+            padding: 30px 30px 0;
+         }
+      }
+
+      /*-----about-----*/
+
+      .about {
+         padding: 30px 30px 0;
+         color: #fff;
+         background-color: var(--mycolor1);
+      }
+
+      .about__container {}
+
+      ._container3 {}
+
+      .about__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .about__image {
+         flex: 1 1 40%;
+         margin: 0 10px -20px;
+      }
+
+      .about__image img {
+         width: 100%;
+         display: flex;
+      }
+
+      .about__content {
+         flex: 1 1 40%;
+         margin: 0 10px;
+      }
+
+      .about__text {
+         margin: 0 0 15px;
+         line-height: 20px;
+      }
+
+      .about_button {
+         margin-top: 5px;
+      }
+
+      .re-button {}
+
+      @media screen and (max-width: 500px) {
+         .about__image {
+            margin: 10px;
+            flex: 1 1 100%;
+         }
+
+         .about {
+            padding: 30px;
+         }
+      }
+
+      .services {
+         padding: 30px;
+      }
+
+      .services__container {}
+
+      .container-3 {}
+
+      .re-title-area {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: first baseline;
+      }
+
+      .services__title-area {}
+
+      .re-sub-title {
+         font-size: 12px;
+         text-transform: uppercase;
+         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+         padding-bottom: 10px !important;
+         display: inline-block;
+         flex: 1 1 20%;
+         margin-right: 30px;
+      }
+
+      .services__sub-title {
+         font-size: 12px;
+         text-transform: uppercase;
+         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+         padding-bottom: 10px !important;
+         display: inline-block;
+         flex: 1 1 20%;
+         margin-right: 30px;
+      }
+
+      .re-title {
+         font-weight: 900;
+         font-size: 30px;
+         display: inline-block;
+         flex: 1 1 60%;
+         line-height: 35px;
+      }
+
+      .services__title {
+         font-weight: 900;
+         font-size: 30px;
+         display: inline-block;
+         flex: 1 1 60%;
+         line-height: 35px;
+      }
+
+      .services__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .services__item {
+         flex: 1 1 30%;
+         margin: 10px;
+      }
+
+      .services__item:nth-child(4),
+      .services__item:nth-child(5),
+      .services__item:nth-child(6) {
+         margin-top: 20px;
+      }
+
+      .services__icon {}
+
+      .services__icon img {
+         width: 50px;
+      }
+
+      .services__description {
+         font-weight: 900;
+         margin: 5px 0;
+      }
+
+      .services__text {
+         margin: 5px 0 10px;
+         color: #212529;
+         line-height: 20px;
+      }
+
+      .services__link {
+         color: var(--mycolor2) !important;
+      }
+
+      .re-button {
+         margin-top: 15px;
+      }
+
+      @media screen and (max-width: 500px) {
+         .services__item {
+            flex: 1 1 100%;
+         }
+
+         .services__item:nth-child(4),
+         .services__item:nth-child(5),
+         .services__item:nth-child(6) {
+            margin-top: 10px;
+         }
+
+         .re-sub-title {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*--------portfolio------*/
+
+      .portfolio {
+         padding: 30px;
+         background: var(--mycolor1);
+         color: #fff;
+         margin: 30px 0 0 30px;
+      }
+
+      .portfolio__container {}
+
+      .container-2 {}
+
+      .portfolio__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .portfolio__content {
+         flex: 1 1 30%;
+         margin: 10px;
+      }
+
+      .portfolio__sub-title {
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         color: #dddde6;
+      }
+
+      .portfolio__title {
+         font-size: 20px;
+      }
+
+      .portfolio__text {
+         color: #aaa;
+         line-height: 22px;
+      }
+
+      .portfolio__button {
+         width: 100%;
+         box-sizing: border-box;
+         text-align: center;
+         border-radius: 5px;
+      }
+
+      .portfolio__image {
+         flex: 1 1 60%;
+         margin: -60px 10px 10px;
+      }
+
+      .portfolio__image img {
+         width: 100%;
+         display: flex;
+      }
+
+      @media screen and (max-width: 500px) {
+         .portfolio__content {
+            flex: 1 1 100%;
+         }
+
+         .portfolio__image {
+            flex: 1 1 100%;
+            margin: 10px;
+         }
+      }
+
+      /*---------reviews-------*/
+
+      .reviews {
+         padding: 60px 30px 30px;
+         background: var(--mycolor1);
+         color: #fff;
+      }
+
+      .reviews__container {}
+
+      ._container {}
+
+      .reviews__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .reviews__item {
+         flex: 1 1 25%;
+         margin: 10px;
+         background-color: #2c2c2c;
+         padding: 20px;
+         transition: .3s;
+      }
+
+      .reviews__item:hover {
+         background-color: #3c3c3c;
+         transition: .3s;
+      }
+
+      .reviews__icon {
+         margin-top: -52px;
+      }
+
+      .reviews__icon img {
+         width: 64px;
+         border-radius: 50%;
+      }
+
+      .reviews__text {}
+
+      .reviews__name {
+         color: #aaa;
+
+         font-style: italic;
+      }
+
+      /*---------blog---------*/
+      .blog {
+         padding: 30px;
+         text-align: center;
+      }
+
+      .blog__container {}
+
+
+      .blog__sub-title {
+         max-width: 70%;
+         margin: 0 auto;
+      }
+
+
+      .blog__title {
+         font-size: 22px;
+      }
+
+      .blog__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+         padding-top: 20px;
+      }
+
+      .blog__item {
+         text-align: left;
+         flex: 1 1 20%;
+         margin: 10px;
+      }
+
+      .blog__image {
+         overflow: hidden;
+
+      }
+
+      .blog__image img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         transition: .3s;
+         display: flex;
+      }
+
+      .blog__item:hover .blog__image img {
+
+         transition: .3s;
+         transform: scale(1.02);
+      }
+
+
+
+      .blog__name {
+         margin: 10px 0 5px;
+         font-weight: 800;
+         font-size: 16px;
+      }
+
+      .blog__data {
+         font-size: 13px;
+         margin: 0;
+         color: #aaa;
+      }
+
+      .blog__data span {
+         color: var(--mycolor3);
+      }
+
+      @media screen and (max-width: 500px) {
+         .blog__item {
+            flex: 1 1 100%;
+         }
+
+         .blog__sub-title {
+            max-width: 100%;
+
+         }
+      }
+
+      /*--------faq--------*/
+
+      .faq {
+         padding: 30px;
+
+      }
+
+      .faq__title {}
+
+      .faq-body {
+         margin: 20px 0 0;
+      }
+
+
+      .faq-body-content {
+         text-align: left;
+      }
+
+      summary::-webkit-details-marker {
+         display: none;
+      }
+
+      summary::-moz-list-bullet {
+         list-style-type: none;
+      }
+
+      summary::marker {
+         display: none;
+      }
+
+      summary {
+         padding: 10px 25px 10px 35px;
+         display: block;
+         font-size: 16px;
+         font-weight: 500;
+         cursor: pointer;
+         position: relative;
+         transition: .3s;
+         color: #fff;
+         background-color: #43434d;
+      }
+
+      details[open]>summary {
+         background-color: var(--mycolor2);
+         font-weight: 600;
+      }
+
+      summary:before {
+         top: 9px;
+         left: 10px;
+         color: transparent;
+         width: 20px;
+         height: 20px;
+         font-size: 20px;
+         font-weight: 900;
+         content: "+";
+         position: absolute;
+         color: #fff;
+         transition: .5s;
+      }
+
+      summary:hover::before {}
+
+      details[open]>summary:before {
+         transition: .5s;
+         content: "–";
+
+      }
+
+      summary~* {
+         padding: 10px 10px 10px 20px;
+      }
+
+      details[open] summary~* {
+         animation: sweep .5s ease-in-out;
+
+      }
+
+      details[open] summary {
+         transition: .3s;
+      }
+
+      @keyframes sweep {
+         0% {
+            opacity: 0;
+         }
+
+         100% {
+            opacity: 1;
+         }
+      }
+
+      summary:focus {
+         outline: 0;
+
+      }
+
+      details {
+         display: block;
+         color: #888;
+      }
+
+      details p {
+         margin: 0 !important;
+      }
+   </style>
+   <div class="main">
+      <section class="introduction">
+         <div class="introduction__container _container">
+            <div class="introduction__body">
+               <div class="introduction__content">
+                  <p class="introduction__sub-title">Separated they live in. Separated they live in Bookmarksgrove right
+                     at the coast of the Semantics, a large language ocean.</p>
+                  <p class="introduction__title">
+                     We are Re<span>shape</span>, and <span>we shape buildings.</span>
+                  </p>
+                  <div class="introduction__buttons">
+                     <a class="re-button" href="#">About us</a> <a class="re-button-black re-button" href="#">Our
+                        services</a>
+                  </div>
+               </div>
+               <div class="introduction__image"><img src="img/introduction.jpg" alt=""></div>
+            </div>
+         </div>
+      </section>
+      <section class="numbers">
+         <div class="numbers__contanier _container-3">
+            <div class="numbers__body">
+               <div class="numbers__item">
+                  <p class="numbers__numeric">1,087</p>
+                  <p class="numbers__text">Number of Projects</p>
+               </div>
+               <div class="numbers__item">
+                  <p class="numbers__numeric">57</p>
+                  <p class="numbers__text">Year of Experience</p>
+               </div>
+               <div class="numbers__item">
+                  <p class="numbers__numeric">670</p>
+                  <p class="numbers__text">Number of Employees</p>
+               </div>
+               <div class="numbers__item">
+                  <p class="numbers__numeric">900</p>
+                  <p class="numbers__text">Number of Clients</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="about">
+         <div class="about__container _container-3">
+            <div class="about__body">
+               <div class="about__image"><img src="img/about.jpg" alt=""></div>
+               <div class="about__content">
+                  <p class="about__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics,
+                     a large language ocean.</p>
+                  <p class="about__text">Far far away, behind the word mountains, far from the countries Vokalia and
+                     Consonantia, there live
+                     the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                     language ocean.</p>
+                  <p class="about__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics,
+                     a large language ocean.</p> <a class="about_button re-button" href="#">About us</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="services">
+         <div class="services__container _container-3">
+            <div class="services__title-area re-title-area">
+               <p class="services__sub-title re-sub-title">Our services</p>
+               <h2 class="services__title re-title">Far far away, behind the word mountains, far from the countries</h2>
+            </div>
+            <div class="services__body">
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/001-icon.png" alt=""></div>
+                  <p class="services__description">Construction Consultation</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/002-icon.png" alt=""></div>
+                  <p class="services__description">House Renovation</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/003-icon.png" alt=""></div>
+                  <p class="services__description">Planning</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/004-icon.png" alt=""></div>
+                  <p class="services__description">Interior Design</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/005-icon.png" alt=""></div>
+                  <p class="services__description">Architecture</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+               <div class="services__item">
+                  <div class="services__icon"><img src="img/006-icon.png" alt=""></div>
+                  <p class="services__description">Installation Works</p>
+                  <p class="services__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics.</p>
+                  <a class="services__link" href="">Learn more</a>
+               </div>
+            </div>
+            <a class="re-button" href="#">Our services</a>
+         </div>
+      </section>
+      <section class="portfolio">
+         <div class="portfolio__container _container-2">
+            <div class="portfolio__body">
+               <div class="portfolio__content">
+                  <p class="portfolio__sub-title">Portfolio</p>
+                  <h2 class="portfolio__title">Project Title</h2>
+                  <p class="portfolio__text">Far far away, behind the word mountains, far from the countries Vokalia and
+                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast
+                     of the Semantics, a large language ocean.</p>
+                  <p class="portfolio__text">A small river named Duden flows by their place and supplies it with the
+                     necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                     your mouth.</p>
+                  <a class="portfolio__button re-button" href="">See Case Study</a>
+               </div>
+               <div class="portfolio__image"><img src="img/portfolio.jpg" alt=""></div>
+            </div>
+         </div>
+      </section>
+      <section class="reviews">
+         <div class="reviews__container _container">
+            <div class="reviews__body">
+               <div class="reviews__item">
+                  <div class="reviews__icon"><img src="img/reviews1.jpg" alt=""></div>
+                  <p class="reviews__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics, a large language ocean.</p>
+                  <p class="reviews__name">James Anderson</p>
+               </div>
+               <div class="reviews__item">
+                  <div class="reviews__icon"><img src="img/reviews2.jpg" alt=""></div>
+                  <p class="reviews__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics, a large language ocean.</p>
+                  <p class="reviews__name">James Anderson</p>
+               </div>
+               <div class="reviews__item">
+                  <div class="reviews__icon"><img src="img/reviews3.jpg" alt=""></div>
+                  <p class="reviews__text">Separated they live in. Separated they live in Bookmarksgrove right at the
+                     coast of the Semantics, a large language ocean.</p>
+                  <p class="reviews__name">James Anderson</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="blog">
+         <div class="blog__container _container">
+            <h2 class="blog__title ">Blog Posts</h2>
+            <p class="blog__sub-title ">Separated they live in. Separated they live in Bookmarksgrove
+               right at the coast of the Semantics, a large language ocean.</p>
+            <div class="blog__body">
+               <div class="blog__item">
+                  <div class="blog__image"><img src="img/blog1.jpg" alt=""></div>
+                  <p class="blog__name">Separated they live in</p>
+                  <p class="blog__data">Aug 4, 2020 by <span>Admin</span> in <span>Architect</span>
+                  </p>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__image"><img src="img/blog2.jpg" alt=""></div>
+                  <p class="blog__name">Separated they live in</p>
+                  <p class="blog__data">Aug 4, 2020 by <span>Admin</span> in <span>Architect</span>
+                  </p>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__image"><img src="img/blog3.jpg" alt=""></div>
+                  <p class="blog__name">Separated they live in</p>
+                  <p class="blog__data">Aug 4, 2020 by <span>Admin</span> in <span>Architect</span>
+                  </p>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__image"><img src="img/blog4.jpg" alt=""></div>
+                  <p class="blog__name">Separated they live in</p>
+                  <p class="blog__data">Aug 4, 2020 by <span>Admin</span> in <span>Architect</span>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="faq">
+         <div class="faq__container _container-3">
+            <div class="faq__title-area re-title-area">
+               <p class="faq__sub-title re-sub-title">FAQ</p>
+               <h2 class="faq__title re-title">Frequently Asked Questions By Buyers</h2>
+
+            </div>
+            <div class="faq-body">
+               <div itemscope itemtype="https://schema.org/FAQPage" class="faq-body-content">
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Non consectetur a erat nam at lectus urna duis?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</body>
+
+</html>
